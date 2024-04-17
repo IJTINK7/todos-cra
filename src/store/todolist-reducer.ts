@@ -13,7 +13,7 @@ export type TaskType = {
 	isDone: boolean
 }
 
-const initialState: TodolistType = {
+export const initialState: TodolistType = {
 	taskTitleInputValue: "",
 	tasksData: [
 		{id: v1(), title: "Тестовое задание", isDone: false},
