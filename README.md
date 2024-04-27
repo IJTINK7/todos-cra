@@ -2,8 +2,8 @@
 # Стэк(React, Redux, TypeScript)
 
 ## Склонируйте репозиторий и перейдите к нему:
-### git clone https://github.com/IJTINK7/mindbox_todos-cra.git
-### cd mindbox_todos-cra
+### git clone https://github.com/IJTINK7/todos-cra.git
+### cd todos-cra
 
 ## Установите зависимости
 ### npm i
