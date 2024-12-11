@@ -7,34 +7,34 @@ import {ExpandMore} from "@mui/icons-material";
 import {TodolistInput} from "./TodolistInput";
 import {TasksBar} from "./TasksBar";
 import {ControlBar} from "./ControlBar";
+import * as Styled from "./NestedList.styles";
 
-export function NestedList() {
-	const [open, setOpen] = useState<boolean>(true);
+export const NestedList = () => {
+  const [open, setOpen] = useState<boolean>(true);
+  const handleClick = () => {
+    setOpen(!open);
+  };
 
-	const handleClick = () => {
-		setOpen(!open);
-	};
-
-	return (
-		<div style={{display: "flex", flexDirection: "column"}}>
-			<List
-				component="div"
-				style={{margin: 0, padding: 0}}
-			>
-				<div style={{display: "flex"}}>
-					<ListItemButton onClick={handleClick} style={{backgroundColor: 'white'}}>
-						{open ? <ExpandLess /> : <ExpandMore />}
-					</ListItemButton>
-					<TodolistInput/>
-				</div>
-				<Collapse in={open} unmountOnExit>
-					<List style={{backgroundColor: 'white'}}>
-						<hr/>
-						<TasksBar/>
-						<ControlBar/>
-					</List>
-				</Collapse>
-			</List>
-		</div>
-	);
+  return (
+    <Styled.NestedListWrapper>
+      <List
+        component="div"
+        style={{margin: 0, padding: 0}}
+      >
+        <Styled.NestedListDropdown>
+          <ListItemButton onClick={handleClick} style={{backgroundColor: '#FFF'}}>
+            {open ? <ExpandLess/> : <ExpandMore/>}
+          </ListItemButton>
+          <TodolistInput/>
+        </Styled.NestedListDropdown>
+        <Collapse in={open} unmountOnExit>
+          <List style={{backgroundColor: '#FFF'}}>
+            <Styled.Hr/>
+            <TasksBar/>
+            <ControlBar/>
+          </List>
+        </Collapse>
+      </List>
+    </Styled.NestedListWrapper>
+  );
 }
