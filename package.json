@@ -2,7 +2,7 @@
   "name": "mindbox_todos-cra",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://IJTINK7.github.io/mindbox_todos-cra",
+  "homepage":"https://IJTINK7.github.io/todos-cra",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
